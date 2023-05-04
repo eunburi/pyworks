@@ -1,4 +1,4 @@
- <header>
+<header>
     <div id="logo">
         <a href="{{ url_for('index') }}"><h1>Gangnam</h1></a>
     </div>
@@ -17,7 +17,7 @@
                     <li><a href="">글 쓰기</a></li>
                 </ul>
             </li>
-            <li><a href="{{ url_for('login') }}">로그아웃</a></li>
+            <li><a href="{{ url_for('logout') }}">로그아웃</a></li>
             {% else %}
             <li><a href="">회원</a>
                 <ul>
@@ -32,8 +32,7 @@
                 </ul>
             </li>
             <li><a href="{{ url_for('login') }}">로그인</a></li>
-
-            {%  endif %}
+            {% endif %}
         </ul>
     </nav>
- </header>
+</header>

@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>로그인</title>
+    <title>로그인 </title>
     <link rel="stylesheet"
           href="{{ url_for('static', filename='css/style.css') }}">
 </head>
@@ -13,9 +13,9 @@
             <h2>로그인</h2>
             <form action="{{ url_for('login') }}" method="post">
                 <fieldset>
-                    {%  if error_msg %}
-                        <p class="error">{{ erroor_msg  }}</p>
-                    {%  endif %}
+                    {% if error_msg %}
+                      <p class="error">{{ error_msg }}</p>
+                    {% endif %}
                     <ul>
                         <li>
                             <label>아이디</label>
@@ -23,13 +23,12 @@
                         </li>
                         <li>
                             <label>비밀번호</label>
-                            <input type="text" name="passwd">
+                            <input type="password" name="passwd">
                         </li>
                         <li>
                             <input type="submit" value="로그인">
                         </li>
                     </ul>
-
                 </fieldset>
             </form>
         </section>
