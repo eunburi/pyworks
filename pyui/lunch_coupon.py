@@ -11,7 +11,7 @@ namelist = ['이진성','노승우','박성호','권지혜','김은효',
 
 def click():
     winner = []
-    """
+
     #구현 1.
     while len(winner) <5:
         name = random.choice(namelist)
@@ -20,21 +20,25 @@ def click():
 
     output.delete(0.0, END)
     #output.insert(END, winner) # list대신 str로 출력 요망
-    for i in winner:
-        output.insert(END, i + ' ')
-    """
+    # for i in winner:
+    #     output.insert(END, i + ' ')
+
+    #문자열 연결하기 - join()
+    output.insert(END, ' '.join(winner))
 
     #구현2 - randint()사용
-
+    """
     while len(winner) <5:
         idx = random.randint(0,19)
         if idx not in winner:
             winner.append(idx)
+    
 
     #출력
     output.delete(0.0, END)
     for i in winner:
         output.insert(END, namelist[i] + ' ')
+        """
 
 
 
