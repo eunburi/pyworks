@@ -17,14 +17,17 @@
             <table>
                 <thead>
                     <tr>
-                        <th>글번호</th><th>글제목</th><th>작성일</th><th>whghltn</th><th>글쓴이</th>
+                        <th>글번호</th><th>글제목</th><th>작성일</th><th>조회수</th><th>글쓴이</th>
                     </tr>
                 </thead>
                 <tbody>
                     {% for board in boardlist %}
                     <tr>
                         <td>{{ board[0] }}</td>
-                        <td><a href="">{{ board[1] }}</a></td>
+                        <td>
+                            <a href="{{ url_for('detail', bno=board[0]) }}">
+                                {{ board[1] }}</a>
+                        </td>
                         <td>{{ board[3] }}</td>
                         <td>{{ board[4] }}</td>
                         <td>{{ board[5] }}</td>
