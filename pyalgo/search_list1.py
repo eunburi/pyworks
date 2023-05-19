@@ -2,11 +2,11 @@
 # 리스트의 첫번재 자료부터 하나씩 비교하면서 같은 값이 나오면
 # 그 위치를 돌려주고(반환), 못찾으면 -1을 반환함
 
-def search_list(a, x):
+def search_list(a, x): #리스트,찾는값
     n = len(a)
     for i in range(0, n):
-        if a[i] == x:
-            return i
+        if a[i] == x: #x값과 비교하여 갚으면
+            return i    # 위치를 반환함
     return -1
 
 def search_list2(a, x):
